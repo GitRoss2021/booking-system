@@ -13,7 +13,7 @@
                   <div class="border"></div>
             <div class="col-lg-12 login-form">
               <div class="col-lg-12 login-form">
-                <form>
+                <form @submit.prevent="login">
                   <div class="form-group">
                     <label class="form-control-label" style="color: white"
                       ></label
@@ -77,7 +77,7 @@ export default {
         .then((json) => {
           localStorage.setItem("jwt", json.jwt);
           alert("User logged in");
-          this.$router.push({ name: "Products" });
+          this.$router.push({ name: "Booking" });
         })
         .catch((err) => {
           alert(err);

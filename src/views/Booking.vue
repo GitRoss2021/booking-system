@@ -82,9 +82,9 @@
               <h5>
                 {{ booking.description }}
               </h5>
-              <div class="d-grid gap-2 my-4">
+              <!-- <div class="d-grid gap-2 my-4">
                 <span class="btn btn-warning bold-btn" @click="addToCart">add to cart</span>
-              </div>
+              </div> -->
               <!-- <div class="clearfix mb-1">
                 <button class="float-end btn btn-danger" @click="DeleteProduct" >DELETE</button>
               </div> -->
@@ -259,10 +259,10 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
-          this.products = json;
-          this.products.forEach(async (product) => {
+          this.booking = json;
+          this.booking.forEach(async (booking) => {
             await fetch(
-              "" + product.created_by,
+              "" + booking.created_by,
               {
                 method: "GET",
                 headers: {

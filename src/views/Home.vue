@@ -71,24 +71,114 @@
 The Woods hotel, located at the very heart of Indianapolis is a welcoming retreat both for people traveling across the country and for businessmen, visiting our Rustbelt state for some commercial affairs. Here, we always make sure that you will have any of your needs satisfied, be it a comfortable hotel room with a strong WiFi signal and a diligent room service, a dining and lounge zone or any additional amenities a traveller might want…</p> <br><br><br>
     <button class="btn-middle"><router-link to="login">Book a room </router-link></button> <br><br>
    <div class="dinner">
-      <img src="../assets/home/fork.jpg" alt="">
-      <img src="../assets/home/coffee.jpg" alt="">
-      <img src="../assets/home/greek.jpg" alt="">
+   <section class="about-area pt-60">
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-12 mb-60">
+                  <div class="section-title text-center">
+                     
+                     <h4>our menu</h4>
+                  </div>
+               </div>
+            </div>
+            <div class="row menu_style1">
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img class="photo" src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img class="photo" src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-6.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img class="photo" src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-5.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img class="photo" src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img class="photo" src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img class="photo" src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img class="photo" src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-4.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img class="photo" src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-3.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-4">
+                  <div class="single_menu_list">
+                     <img class="photo" src="http://infinityflamesoft.com/html/restarunt-preview/assets/img/menu/menu-2.jpg" alt="">
+                     <div class="menu_content">
+                        <h4>Chicken Fried Salad  <span>$45</span></h4>
+                        <p>Aperiam tempore sit,perferendis numquam repudiandae porro voluptate dicta saepe facilis.</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="row pb-60">
+               <div class="col-xl-12 text-center">
+                  
+               </div>
+            </div>
+         </div>
+      </section>
     </div>
     </div>
     
     
 </div>
 </section>
-<section class="footer">
-        <!-- <div class= "footer bg-dark" style="color:white">
-         <img src="../assets/logo/head.png" alt=""> -->
-       <!-- Copyright -->
-<!-- <div class="-copyright text-center py-3 ">© 2020 Copyright: GitRoss2021
- </div> -->
-       <!-- </div> -->
-</section>
-<footer class="footer-section">
+
+<!-- <footer class="footer-section">
         <div class="container">
             <div class="footer-cta pt-5 pb-5">
                 <div class="row">
@@ -192,7 +282,7 @@ The Woods hotel, located at the very heart of Indianapolis is a welcoming retrea
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </template>
 
 <script>
@@ -215,9 +305,9 @@ export default {
 .title{
     
     margin-top: 200px;
-    margin-left: 37%;
-    width: 390px;
-    height: 370px;
+    margin-left: 35%;
+    width: 500px;
+    height: 470px !important;
     -webkit-animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: fade-in 1.2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
@@ -271,7 +361,7 @@ export default {
     margin-left: -350px;
 background-color: whitesmoke !important;
 width: 119% !important;
-height: 1500px !important;
+height: 1850px !important;
 }
 
 .images{
@@ -555,5 +645,93 @@ ul {
 
 .img-fluid{
   height: 200px !important;
+}
+
+/* food */
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: #333;
+	line-height: 1.6;
+}
+.pt-100{
+    padding-top:100px;
+}
+.pb-100{
+    padding-top:100px;
+}
+.mb-60 {
+	margin-bottom: 60px;
+}
+.section-title p {
+	font-size: 24px;
+	font-family: Oleo Script;
+	margin-bottom: 0px;
+	margin-top:50px;
+}
+.section-title h4 {
+	font-size: 40px;
+	text-transform: capitalize;
+	color: #FF5E18;
+	position: relative;
+	display: inline-block;
+	padding-bottom: 25px;
+}
+.section-title h4::before {
+	width: 80px;
+	height: 1.5px;
+	bottom: 0;
+	left: 50%;
+	margin-left: -40px;
+}
+.section-title h4::before, .section-title h4::after {
+	position: absolute;
+	content: "";
+	background-color: #FF5E18;
+}
+.single_menu_list img {
+	max-width: 30%;
+	position: absolute;
+	left: 0px;
+	top: 0;
+	border: 1px solid #ddd;
+	padding: 3px;
+	border-radius: 50%;
+	transition: .4s;
+}
+.menu_style1 .single_menu_list img {
+	position: static;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 45px;
+}
+.single_menu_list h4 {
+	font-size: 20px;
+	border-bottom: 1px dashed #333;
+	padding-bottom: 15px;
+	margin-bottom: 10px;
+}
+.single_menu_list h4 span {
+	float: right;
+	font-weight: bold;
+	color: #FF5E18;
+	font-style: italic;
+}
+p {
+	font-weight: 300;
+	font-size: 14px;
+}
+.menu_style1 .single_menu_list {
+	text-align: center;
+}
+.single_menu_list:hover img {
+	border-radius: 0;
+	transition: .4s;
+}
+
+.photo{
+  border: none !important;
+  width: 5%;
+  height: 75px !important;
 }
 </style>
