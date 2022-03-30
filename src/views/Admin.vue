@@ -76,7 +76,7 @@ export default {
   },
   methods: {
     login() {
-      fetch("", {
+      fetch("http://localhost:7070/admin", {
         method: "PATCH",
         body: JSON.stringify({
           email: this.email,

@@ -38,53 +38,47 @@
     </div>
 </section>
  <!-- bookings -->
- <section v-if="renderComponent">
+
   <div v-if="booking" class="booking" >
-    <h2>Bookings</h2>
+    <h2 style="color:white">Rooms to Book</h2>
     <!-- <div class="right-side">
       <button class="cart">
         <router-link :to="{ name: 'Cart' }"> CART</router-link>
       </button>
     </div> -->
-    <div class="container-fluid" style="position: relative" >
-      <div class="row">
-        <div class="col">
-           <!-- <div class="search-box">
-      <input type="text" v-model="search" class="search-input" placeholder="Search..">
-   </div> -->
-        </div>
-      </div>
-      <div class="row row-cols-1 row-cols-xs-2 row-cols-sm-2 row-cols-lg-4 g-3">
-        <div class="col hp" v-for="booking of filterBooking" :key="booking._id">
-          <div class="card h-100 shadow-sm">
+    <div class="container-fluid"  >
+      
+      <div v-if="booking" class="row">
+        <div class="card-wrapper" >
+          <div class="card" v-for="book of booking" :key="book._id">
             <a href="#">
               <img
-                :src="booking.img"
-                class="card-img-top"
-                :alt="booking.title"
+                :src="book.img"
+                class="card-img"
+                :alt="book.title"
               />
             </a>
 
             <div class="label-top shadow-sm">
-              <span class="text-white" >{{ booking.category }}</span>
+              <span class="text-white" >{{ book.category }}</span>
             </div>
             <div class="card-body">
               <div class="clearfix mb-3">
                 <span class="float-start badge rounded-pill bg-success"
-                  >R{{ booking.price }}</span
+                  >R{{ book.price }}</span
                 >
 
                 <span class="float-end"></span>
               </div>
-              <h5 class="card-title">
-                <a target="_blank" href="#">{{ booking.title }}</a>
+              <h5 class="card-title" style="color:white">
+                <a target="_blank" href="#">{{ book.title }}</a>
               </h5>
               <h5>
-                {{ booking.description }}
+                {{ book.description }}
               </h5>
-              <!-- <div class="d-grid gap-2 my-4">
-                <span class="btn btn-warning bold-btn" @click="addToCart">add to cart</span>
-              </div> -->
+              <div class="d-grid gap-2 my-4">
+                <button class="btn btn-warning bold-btn"><router-link to="reservation">Book a room </router-link></button> <br><br>
+              </div>
               <!-- <div class="clearfix mb-1">
                 <button class="float-end btn btn-danger" @click="DeleteProduct" >DELETE</button>
               </div> -->
@@ -92,11 +86,12 @@
           </div>
         </div>
       </div>
+      <div v-else>Loading Bookings...</div>
     </div>
   </div>
-  <div v-else>Loading Bookings...</div>
-</section>
-<footer class="footer-section">
+  
+
+<!-- <footer class="footer-section">
         <div class="container">
             <div class="footer-cta pt-5 pb-5">
                 <div class="row">
@@ -200,16 +195,18 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </template>
 
 <script>
 export default {
   data() {
     return {
-      products: null,
+      // products: null,
       search: "",
       renderComponent: true,
+      booking: null
+      
     };
   },
   methods: {
@@ -224,7 +221,7 @@ export default {
       }
     ,
     addToCart(){
-        fetch("", {
+        fetch("http://localhost:8070/booking/", {
         method: "POST",
         body: JSON.stringify({
           fullname: this.name,
@@ -240,7 +237,7 @@ export default {
         .then((json) => {
           alert("User registered");
           localStorage.setItem("jwt", json.jwt);
-          this.$router.push({ name: "Products" });
+          this.$router.push({ name: "Booking" });
         })
         .catch((err) => {
           alert(err);
@@ -250,7 +247,7 @@ export default {
   ,
   mounted() {
     if (localStorage.getItem("jwt")) {
-      fetch("", {
+      fetch("http://localhost:8070/booking", {
         method: "GET",
         headers: {
           "Content-type": "application/json; charset=UTF-8",
@@ -259,10 +256,12 @@ export default {
       })
         .then((response) => response.json())
         .then((json) => {
+          console.log(json)
           this.booking = json;
+          console.log(this.booking)
           this.booking.forEach(async (booking) => {
             await fetch(
-              "" + booking.created_by,
+              "http://localhost:8070/user/",
               {
                 method: "GET",
                 headers: {
@@ -273,7 +272,7 @@ export default {
             )
               .then((response) => response.json())
               .then((json) => {
-                product.created_by = json.title;
+                booking.created_by = json.title;
               });
           });
         })
@@ -286,9 +285,9 @@ export default {
     }
   },
   computed:{
-    filterProducts:function(){
-      return this.products.filter((product) =>{
-        return product.title.match(this.search)
+    filterBooking:function(){
+      return this.booking.filter((booking) =>{
+        return booking.title.match(this.search)
       })
     }
   }
@@ -298,6 +297,7 @@ export default {
 <style scoped>
 
 .dashboard{
+  
   background: url(https://res.cloudinary.com/drcrre4xg/image/upload/v1572142950/bg_k00qm0.png) no-repeat center;
   height: 920px;
   background-size: cover;
@@ -316,13 +316,25 @@ export default {
   max-width: 1400px;
 }
 
-
-.products {
-  background-color: #212529 !important;
+.booking{
+  margin-top: -45%;
 }
 
+h2{
+ 
+  text-align: center;
+  margin-top: 2%;
+}
+
+
 .card {
-  background: #6c757d;
+  display: inline-flex;
+  flex: wrap;
+margin-left: -5%;
+margin: 7px;
+  width: 30%;
+  color: white;
+  background:rgba(0, 0, 0, 0.41);
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
     0.3s box-shadow,
@@ -332,7 +344,8 @@ export default {
 }
 
 .label-top{
-  background-color: #960796 !important;
+  font-size: 16px !important;
+  background-color: red !important;
 
 }
 
@@ -342,11 +355,11 @@ export default {
   font-weight: bold;
 }
 
-.card-img,
-.card-img-top {
-  border-top-left-radius: calc(1rem - 1px);
-  border-top-right-radius: calc(1rem - 1px);
+.card-img-top{
+  width: 40px;
 }
+
+
 
 .card h5 {
   overflow: hidden;
@@ -391,7 +404,7 @@ export default {
   text-transform: uppercase;
 }
 
-.top-right {
+/* .top-right {
   position: absolute;
   top: 24px;
   left: 24px;
@@ -405,7 +418,7 @@ export default {
   line-height: 90px;
   text-align: center;
   color: white;
-}
+} */
 
 .top-right span {
   display: inline-block;
@@ -568,9 +581,7 @@ ul {
   position: relative;
 }
 
-.container{
-	
-}
+
 .footer-cta {
   border-bottom: 1px solid #373636;
 }
@@ -665,7 +676,7 @@ ul {
 }
 .footer-widget ul li {
   display: inline-block;
-  float: left;
+  /* float: left; */
   width: 50%;
   margin-bottom: 12px;
 }

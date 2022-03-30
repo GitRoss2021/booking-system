@@ -98,7 +98,7 @@ export default {
         .then((json) => {
           alert("User registered");
           localStorage.setItem("jwt", json.jwt);
-          this.$router.push({ name: "Products" });
+          this.$router.push({ name: "Booking" });
         })
         .catch((err) => {
           alert(err);
