@@ -89,24 +89,7 @@
 											</select>
 				</div>
 			</div>
-			<!-- <div class="radio-section">
-				<h6>Select your Fare</h6>
-				<ul class="radio-buttons-w3-agileits">
-					<li>
-						<input type="radio" id="a-option" name="selector1">
-						<label for="a-option">One Way</label>
-						<div class="check"></div>
-					</li>
-					<li>
-						<input type="radio" id="b-option" name="selector1">
-						<label for="b-option">Round-Trip</label>
-						<div class="check">
-							<div class="inside"></div>
-						</div>
-					</li>
-				</ul>
-				<div class="clear"></div>
-			</div> -->
+		
 			<div class="main-flex-w3ls-sectns">
 				<div class="field-agileinfo-spc form-w3-agile-text1">
 					<input id="datepicker1" name="Text" type="text" placeholder="Check in date/time" value="" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="" class="hasDatepicker">
@@ -115,9 +98,7 @@
 					<input type="text" id="timepicker1" name="Time" class="timepicker form-control hasWickedpicker" placeholder="Checkout date/time" value="" onkeypress="return false;">
 				</div>
 			</div>
-			<div class="field-agileinfo-spc form-w3-agile-text">
-				<textarea name="Message" placeholder="Any Message..."></textarea>
-			</div>
+			
 			<h3 class="sub-heading-agileits">Personal Details</h3>
 			<div class="main-flex-w3ls-sectns">
 				<div class="field-agileinfo-spc form-w3-agile-text1">
@@ -129,14 +110,36 @@
 			</div>
 			<div class="field-agileinfo-spc form-w3-agile-text">
 				<input type="email" name="Email" placeholder="Email" required="">
+			</div> <br><br>
+			<!-- payment card details -->
+			<div class="head">
+				<h3 class="sub-heading-agileits">Payment Details</h3>
+				<i class="fa fa-cc-diners-club" style="font-size:48px;color:red"></i>
+				<i class="fa fa-cc-paypal" style="font-size:48px;color:red"></i>
+				<i class="fa fa-cc-visa" style="font-size:48px;color:red"></i>
+				<i class="fa fa-cc-mastercard" style="font-size:48px;color:red"></i>
 			</div>
+				<div class="main-flex-w3ls-sectns">
+				<div class="field-agileinfo-spc form-w3-agile-text1">
+					<input type="text" name="Name" placeholder="Name on card" required="">
+				</div>
+				<div class="field-agileinfo-spc form-w3-agile-text2">
+					<input type="text" name="Phone no" placeholder="Card Number" required="">
+				</div>
+			</div>
+			<div class="field-agileinfo-spc form-w3-agile-text">
+				<input type="email" name="Email" placeholder="Email" required="">
+			</div>
+			<!-- ends -->
 			<div class="clear"></div>
 			<input class="btn" type="submit" value="Submit">
 			<input class="btn" type="reset" value="Clear Form">
 			<div class="clear"></div>
 		</form>
 		<!--// Form starts here -->
+		
 	</div>
+	
 </section>
 </template>
 
@@ -153,22 +156,18 @@ export default {
   background-size: cover;
   padding: 40px 0;
 }
-/* body {
-    font-family: 'Roboto', sans-serif;
-    font-size: 100%;
-    background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736881_960_720.jpg)no-repeat center top;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover; */
-    /* background-attachment: fixed; */
-/* } */
+
+i{
+	margin-top: 1% !important;
+	margin: 5px;
+}
+
 /*! CSS Used from: https://p.w3layouts.com/demos_new/template_demo/20-12-2017/airline_booking_form-demo_Free/828699705/web/css/style.css */
 div,h2,h3,h6,form,label{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
 ul{list-style:none;margin:0px;padding:0px;}
 .clear{clear:both;}
-.booking-form-w3layouts{box-sizing:border-box;padding:3em 3em;background:rgba(0, 0, 0, 0.41);width:65%;margin:0 auto; margin-top: 7%;}
-h2.sub-heading-agileits,h3.sub-heading-agileits{display:inline-block;text-align:left;font-size:24px;color:#fff;text-transform:capitalize;margin-bottom:.4em;padding:0px 25px 10px 0px;font-weight:400;letter-spacing:2px;border-bottom:2px solid #0091cd;font-family:'Raleway', sans-serif;}
+.booking-form-w3layouts{box-sizing:border-box;padding:3em 3em;background:rgba(0, 0, 0, 0.41);width:65%;margin:0 auto; margin-top: 2%;}
+h2.sub-heading-agileits,h3.sub-heading-agileits{display:inline-block;text-align:left;font-size:24px;color:#fff;text-transform:capitalize;margin-bottom:.4em;padding:0px 25px 10px 0px;font-weight:400;letter-spacing:2px;border-bottom:2px solid red;font-family:'Raleway', sans-serif;}
 .radio-section{text-align:left;margin:0.7em 0;}
 .radio-section h6{display:inline;margin-top:10px;color:#0091cd;font-size:19px;text-transform:capitalize;margin-bottom:.7em;font-weight:400;letter-spacing:2px;font-family:'Raleway', sans-serif;}
 .radio-section ul{display:inline;}
@@ -179,10 +178,10 @@ h2.sub-heading-agileits,h3.sub-heading-agileits{display:inline-block;text-align:
 .field-agileinfo-spc{margin-bottom:1em;}
 .form-w3-agile-text{width:100%;}
 select.form-control option{background:#000;}
-.booking-form-w3layouts input[type="submit"],.booking-form-w3layouts input[type="reset"]{text-transform:capitalize;background:#0091cd;color:#fff;padding:0.5em 4em;border:none;font-weight:500;font-size:1.2em;margin-top:1em;float:left;outline:none;letter-spacing:1px;-webkit-transition:.5s all;-moz-transition:.5s all;transition:.5s all;cursor:pointer;font-family:'Raleway', sans-serif;}
-.booking-form-w3layouts input[type="submit"]{margin-right:1.5em;background:#d2741c;}
-.booking-form-w3layouts input[type="submit"]:hover{background:#0091cd;color:#fff;}
-.booking-form-w3layouts input[type="reset"]:hover{background:#d2741c;color:#fff;}
+.booking-form-w3layouts input[type="submit"],.booking-form-w3layouts input[type="reset"]{text-transform:capitalize;background: transparent;color:#fff;padding:0.5em 4em;border:none;font-weight:500;font-size:1.2em;margin-top:1em;float:left;outline:none;letter-spacing:1px;-webkit-transition:.5s all;-moz-transition:.5s all;transition:.5s all;cursor:pointer;font-family:'Raleway', sans-serif;}
+.booking-form-w3layouts input[type="submit"]{margin-right:1.5em;background: transparent;}
+.booking-form-w3layouts input[type="submit"]:hover{background: red;color:#fff; border-radius: 35px;}
+.booking-form-w3layouts input[type="reset"]:hover{background:red;color:#fff; border-radius: 35px;}
 .booking-form-w3layouts ::-webkit-input-placeholder{color:#fff;}
 .booking-form-w3layouts :-moz-placeholder{color:#fff;}
 .booking-form-w3layouts ::-moz-placeholder{color:#fff;}

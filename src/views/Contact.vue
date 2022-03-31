@@ -9,7 +9,7 @@
   <form class="contact-form" action="index.html" method="post">
     <input type="text" class="contact-form-text" placeholder="Your name">
     <input type="email" class="contact-form-text" placeholder="Your email">
-    <input type="text" class="contact-form-text" placeholder="Your phone">
+    <input type="subject" class="contact-form-text" placeholder="Subject">
     <textarea class="contact-form-text" placeholder="Your message"></textarea>
     <input type="submit" class="contact-form-btn" value="Send">
   </form>

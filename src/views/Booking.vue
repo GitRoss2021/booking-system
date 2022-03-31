@@ -70,8 +70,8 @@
 
                 <span class="float-end"></span>
               </div>
-              <h5 class="card-title" style="color:white">
-                <a target="_blank" href="#">{{ book.title }}</a>
+              <h5 class="card-title">
+                <a class="title" target="_blank" href="#">{{ book.title }}</a>
               </h5>
               <h5>
                 {{ book.description }}
@@ -327,6 +327,7 @@ h2{
 }
 
 
+
 .card {
   display: inline-flex;
   flex: wrap;
@@ -359,6 +360,12 @@ margin: 7px;
   width: 40px;
 }
 
+.title{
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+}
+
 
 
 .card h5 {
@@ -367,6 +374,8 @@ margin: 7px;
   font-weight: 300;
   font-size: 1rem;
 }
+
+.card h5
 
 .card h5 a {
   color: black;
